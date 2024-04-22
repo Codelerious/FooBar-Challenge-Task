@@ -13,13 +13,7 @@ client = AzureOpenAI(
 
 @app.route("/")
 def hello_world():
-    return 'This is my first API call!'
-
-@app.route('/post', methods=["POST"])
-def testpost():
-     input_json = request.get_json(force=True) 
-     dictToReturn = {'text':input_json['posting']}
-     return jsonify(dictToReturn)
+    return 'This is a test API call!'
 
 
 @app.route('/gpt-35', methods=["POST"])
